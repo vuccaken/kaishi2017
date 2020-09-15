@@ -1,0 +1,85 @@
+\documentclass[10pt,b5paper,papersize]{jsbook}
+% papersize : pdfの用紙サイズを変更
+% openany : partやchapterによる空白ページの挿入を防ぐ。
+
+\usepackage{amsmath,amssymb,cases} %数学関係
+\usepackage[dvipdfmx]{graphicx} %図
+\usepackage{setspace} %行間調整
+\usepackage{wrapfig} %文章中に図
+\usepackage{ascmac} %枠を作るやつ
+\usepackage{here} %Hで図を強制出力
+\usepackage{ulem} %下線を引く
+\usepackage{url} %URLをそのまま表示してくれる
+
+\usepackage{multirow}
+\usepackage{bigdelim}
+
+
+\def\ko#1{\ensuremath{\stackrel{\hbox{\tate$\big($}}{\mbox{#1}}}} %円弧
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\DD}{\mathrm{D}}
+\newcommand{\KK}{\mathrm{K}}
+\renewcommand{\labelenumi}{[\arabic{enumi}]} %参考文献
+
+
+\setcounter{tocdepth}{1} %目次にどこまで表示するか
+
+%
+\begin{document}
+\frontmatter %ページ番号はローマ数字。章番号を付けない。
+
+%
+\chapter*{巻頭言}
+\addcontentsline{toc}{chapter}{巻頭言}
+物理科学研究会会長の門野広大です。なんか成り行きで二年間も会長という役職についていました。自分がこのサークルに入った当初は学術公認団体で大学からお金も出ている団体であるにもかかわらず一回生が自分一人で部員数が5人と言った感じでほぼ潰れかけのサークルでした。その状態のサークルに入った理由としては大学に居場所が欲しいと言った物理とは全く関係ない理由で入部しました。でも、会長職を押し付けられなんとなく会長をするのも嫌だったのでこの潰れかけの状態から立ち直そうという意気込みで就任しました。二年間会長をしてまず環境を良くし、学友会費を5倍にすることができました。実験としては電子工作系の実験を新たに始め、ゼミは長期休みに一回勉強会を開くなどを行いました。これからの物理科学研究会はなんとなくあるようなサークルで続いていってくれることを期待しています。
+\begin{flushright}
+  2017年11月24日\\
+  物理科学科 3回生 門野 広大
+\end{flushright}
+
+\vspace{3zw}
+こんにちは。物理科学研究会の西村です。今年度は夏にOB会が開催され、貴重なお話をOBの方々にたくさんして頂きました。そこで、約４０年前の物理科学研究会（旧核物理学研究会）の役職についてのお話があり、その頃の研究会では会長、副会長、会計の他に会長補佐という役職があったことを知りました。会長補佐は２回生が就任し、研究会の運営を会長の代わりに行っていたそうです(何かあった時の責任は会長が取っていました)。なぜその役職があったかというと、新しく入会した１回生が２回生が中心に運営することで研究会の活動に親しみやすくなるからです。その役職を今年の夏から復活させ、私が就任しました。この数か月、会長補佐として活動してきましたが会長の大変さがよくわかりました。学園祭後は役職の交代があり、私が会長に就く予定です。これからは会長として責任感を持って活動していきます。
+\begin{flushright}
+  2017年11月24日\\
+  物理科学科 2回生 西村 宗悟
+\end{flushright}
+
+
+%
+\tableofcontents %目次出力
+\mainmatter %ページ番号は算用数字。章番号を付ける。
+%
+
+
+%
+\input{tuzi/tuzi.tex} \clearpage
+% \input{nishimura/nisimura2017-1} \clearpage
+\input{nishimura/entoropi-} \clearpage
+\input{nakayama1/curve} \clearpage
+\input{nakayama2/galois} \clearpage
+\input{honda/honda.tex} \clearpage
+
+
+%
+\backmatter %以降章番号を付けない。
+
+
+%
+\chapter*{編集後記}
+\addcontentsline{toc}{chapter}{あとがき}
+編集を担当しました中山です。これを書いているのは学園祭前日です。つまりギリギリでした。会誌提出の締め切りは1ヶ月延長することとなりましたが、一応形にはしてきてくれたのでなんとか完成させることができました。みなさんお疲れ様でした。\par
+去年の学園祭では会誌はとりあえず手書きでもWordでもなんでもいいから各自作ってもらい、それを1つにつなげるだけというものでした。しかしそれでは通しでページ番号を付けられないという問題が発生し、次からはみんな\TeX で書きましょうということになりました。今年のOB会で去年の会誌を全部\TeX で作り直し、かなりきれいにできたので今回も表紙以外は\TeX で作りました。\par
+表紙と裏表紙は、会長最後の仕事として門野先輩に作っていただきました。今までお疲れ様でした。学園祭を期に、会長は2回生の西村君に交代です。頑張ってください。
+ \vspace{3mm}\\
+{\bf P.S. \,\,部員へ}\par
+来年度はみっちり\TeX 講座を行います。
+\begin{flushright}
+  2017年11月25日\\
+  物理科学科 2回生 中山 敦貴
+\end{flushright}
+
+\vspace{8zw} \hrulefill \par
+{\large \bf 2017年度 物理科学研究会会誌}\par
+\quad 2017年11月26日 発行
+
+\end{document}
